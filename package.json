@@ -10,7 +10,15 @@
     "clean": "rimraf build",
     "build": "npm run clean && tsc"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leifarriens/node-ts.git"
+  },
   "author": "Leif Arriens",
+  "bugs": {
+    "url": "https://github.com/leifarriens/node-ts/issues",
+    "homepage": "https://github.com/leifarriens/node-ts#readme"
+  },
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^17.0.31",
