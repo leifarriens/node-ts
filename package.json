@@ -1,10 +1,10 @@
 {
   "name": "node-ts",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "main": "build/index.js",
   "scripts": {
     "start": "node build/index.js",
-    "dev": "nodemon --watch src --ext ts,js --exec \"tsc && node ./build/index.js\"",
+    "dev": "nodemon --watch src --ext ts,js --exec \"swc ./src -d build && node build/index.js\"",
     "lint": "eslint ./src --ext .js --ext .ts",
     "lint:fix": "npm run lint --fix",
     "clean": "rimraf build",
@@ -21,6 +21,8 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@swc/cli": "^0.1.57",
+    "@swc/core": "^1.2.233",
     "@types/node": "^17.0.31",
     "@typescript-eslint/eslint-plugin": "^5.22.0",
     "@typescript-eslint/parser": "^5.22.0",
